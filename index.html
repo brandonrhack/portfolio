@@ -503,14 +503,14 @@ const pages = {
     const p = PROJECTS.find(x => x.slug === slug);
     if (!p) return notFound();
     const S = [
-      ["context", "Project Context", textBox(p.context, "Why did you do this project? What were your goals?")],
-      ["made", "What We Made", textBox(p.made, "Describe what you made and did.")],
+      ["context", "Project Context", textBox(p.context, "I did this project to further understand how individual components work together to make a specific type of movement, and gain experience in autocad, lasercutting, and prototyping. My goal was to make a functional scissor linkage mechanism.")],
+      ["made", "What We Made", textBox(p.made, "I made a lazy-tong (scissor) linkage mechanism, a chain of crossed bars pinned together at their crossings and ends. When pulled or pushed, the mechanism extends or retracts allowing for an adjustable length while the structure itself remains rigid.")],
       ["prototype", "Low-Fidelity Prototype",
         `<div class="pair">${withCap(media(p.prototype.photo, "Add prototype photo", p.prototype.photoCaption || "Low-fidelity prototype", "fit"), p.prototype.photoCaption)}${withCap(videoBox(p.prototype.video, "Add prototype video"), p.prototype.videoCaption)}</div>
-         ${textBox(p.prototype.description, "Describe your prototype and progress along the way.")}`],
+         ${textBox(p.prototype.description, "For the prototype, I used an empty cereal box to construct the links and the two rods at the end. I used a ruler to draw evenly spaced lines with the ruler width being the width of each rectangle, and the cereal boxes width being the length of each rectangle. One of the ends of the ruler already had a rounded end, so I used that to make the rounded ends on each end of the links since it is the same width as the rods. I then traced out the two rods with a ruler and stacked two cereal cardboard pieces on top of each other while cutting so they would end up the same shape. I then used a hole puncher to make the holes which the brass fasteners would go through. Finally I assembled the mechanism by connecting the links and rods with the brass fasteners.")}`],
       ["completed", "Completed Project",
         `<div class="pair">${withCap(media(p.completed.photo, "Add completed project photo", p.completed.photoCaption || "Completed project", "fit"), p.completed.photoCaption)}${withCap(videoBox(p.completed.video, "Add completed project video"), p.completed.videoCaption)}</div>
-         ${textBox(p.completed.description, "Describe your completed project.")}`],
+         ${textBox(p.completed.description, "For the final lasercut product, I used lines, circles, and arcs to create the basic shape for the links and rods in AutoCAD. I also used the trim and array tools to remove unnecessary lines and copy the links. After laser cutting the final prototype I realised we made the holes for the brass fasteners too big since we forgot the circle size was based on radius and not distance. I had to go back to AutoCAD and use the properties menu to change the radius of all the holes in the links. After reprinting the prototype the brass fasteners fit perfectly and I assembled the prototype by attaching the links and rods with the brass fasteners.")}`],
       ["drawing", "AutoCAD Drawing", drawingBox(p.drawing.file)]
     ];
     return `
