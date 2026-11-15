@@ -381,7 +381,7 @@ const PROJECTS = [
     made: "I made a lazy-tong (scissor) linkage mechanism, a chain of crossed bars pinned together at their crossings and ends. When pulled or pushed, the mechanism extends or retracts allowing for an adjustable length while the structure itself remains rigid.",             // What did you make / do?
 
     prototype: {          // low-fidelity prototype
-      photo: "",
+      photo: "low.JPG",
       photoCaption: "",   // one line, e.g. what the photo shows
       video: "",
       videoCaption: "",
@@ -389,7 +389,7 @@ const PROJECTS = [
     },
 
     completed: {          // final, completed project
-      photo: "",
+      photo: "high.JPG",
       photoCaption: "",   // one line, e.g. what the photo shows
       video: "",
       videoCaption: "",
@@ -504,7 +504,7 @@ const pages = {
     if (!p) return notFound();
     const S = [
       ["context", "Project Context", textBox(p.context, "Why did you do this project? What were your goals?")],
-      ["made", "What We Made", textBox(p.made, "Describe what you made and did.")],
+      ["made", "What I Made", textBox(p.made, "Describe what you made and did.")],
       ["prototype", "Low-Fidelity Prototype",
         `<div class="pair">${withCap(media(p.prototype.photo, "Add prototype photo", p.prototype.photoCaption || "Low-fidelity prototype", "fit"), p.prototype.photoCaption)}${withCap(videoBox(p.prototype.video, "Add prototype video"), p.prototype.videoCaption)}</div>
          ${textBox(p.prototype.description, "Describe your prototype and progress along the way.")}`],
